@@ -1,0 +1,93 @@
+body{
+    box-sizing: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.App{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+    & .app-sidebar{
+        background-color: rgb(233, 236, 241);
+        box-shadow: 1px 1px 4px rgb(5, 66, 61);
+        height: 100vh;
+        padding-left: 10px;
+
+        & .app-sidebar-header{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            & button{
+                background-color: transparent;
+                border: none;
+                color: rgb(23, 206, 136);
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+
+        & .app-sidebar-notes{
+
+            & .app-sidebar-note{
+                padding:10px;
+                border-bottom: 1px solid rgb(34, 83, 110);
+                cursor: pointer;
+
+                &.active{
+                    background-color: rgb(116, 116, 187);
+                }
+
+
+                & button{
+                    background-color: transparent;
+                    border: none;
+                    color: red;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    & .app-main{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        & .app-main-note-edit{
+            
+            height: 40%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+
+            & #title{
+
+                width: 50%;
+                height: 36px;
+                font-size: 24px;
+                font-weight: bold;
+
+            }
+
+            & textarea{
+                height: 100%;
+                resize: none;
+                padding: 10px;
+            }
+        }
+    }
+
+    & .app-main-note-preview{
+        background-color: rgb(132, 143, 145);
+        box-shadow: 1px 1px 4px grey;
+        height: 100%;
+        padding: 10px;
+    }
+}
