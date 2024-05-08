@@ -10,7 +10,7 @@ const Sidebar = ({
   return (
     <div className="app-sidebar">
       <div className="app-sidebar-header">
-        <h1>Notes</h1>
+        <h1>My Bloc-Notes</h1>
         <button onClick={onAddNote}>+ Add</button>
       </div>
       <div className="app-sidebar-notes">
@@ -20,7 +20,7 @@ const Sidebar = ({
               <strong>{note.title}</strong>
               <button onClick={() => onDeleteNote(note.id)}>Delete</button>
             </div>
-            <p>{note.body && note.body.substr(0, 100) + "..."}</p>
+            <p>{note.body && note.body.substr(0, 40) + "..."}</p>
 
             <small className="note-meta">
               Last modified{" "}
